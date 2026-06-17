@@ -27,7 +27,7 @@
     "./styles.css": "./dist/styles.css",
     "./styles.layer.css": "./dist/styles.layer.css"
   },
-  "repository": "https://github.com/mantinedev/extension-template.git",
+  "repository": "https://github.com/0N0K0/Materia.git",
   "peerDependencies": {
     "@mantine/core": ">=7.0.0",
     "@mantine/hooks": ">=7.0.0",
