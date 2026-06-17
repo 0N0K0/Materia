@@ -7,7 +7,7 @@ This is a template repository for creating Mantine extensions. It includes all n
 1. Click "Use this template" button at the top of the page to create a new repository based on this template.
 2. Clone the repository to your local machine and install dependencies (`yarn`)
 3. Run `nvm use` to switch to the correct node version
-4. Come up with a name for your extension and replace all occurrences of `mantine-extension-template` with your extension name
+4. Come up with a name for your extension and replace all occurrences of `@0n0k0/materia` with your extension name
 5. Change `repository` field in [package/package.json](https://github.com/mantinedev/extension-template/blob/master/package/package.json) to point to your repository
 6. Run `npm run docgen` to generate files required for documentation
 7. To verify that everything works correctly, run `npm run build` and `npm test` to build and test your initial setup

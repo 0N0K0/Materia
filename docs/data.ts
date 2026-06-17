@@ -1,5 +1,5 @@
 export interface PackageData {
-  /** Package name as in npm, for example, `mantine-extension-template` */
+  /** Package name as in npm, for example, `@0n0k0/materia` */
   packageName: string;
 
   /** Description of the package, displayed below the title in documentation */
@@ -25,15 +25,15 @@ export interface PackageData {
 }
 
 export const PACKAGE_DATA: PackageData = {
-  packageName: 'mantine-extension-template',
+  packageName: "@0n0k0/materia",
   packageDescription:
-    'A template for mantine extensions, includes full setup for package development and documentation',
+    "A template for mantine extensions, includes full setup for package development and documentation",
   mdxFileUrl:
-    'https://github.com/rtivital/mantine-extension-template/blob/master/docs/pages/index.mdx',
-  repositoryUrl: 'https://github.com/rtivital/mantine-extension-template',
-  licenseUrl: 'https://github.com/rtivital/mantine-extension-template/blob/master/LICENSE',
+    "https://github.com/rtivital/@0n0k0/materia/blob/master/docs/pages/index.mdx",
+  repositoryUrl: "https://github.com/rtivital/@0n0k0/materia",
+  licenseUrl: "https://github.com/rtivital/@0n0k0/materia/blob/master/LICENSE",
   author: {
-    name: 'Vitaly Rtishchev',
-    githubUsername: 'rtivital',
+    name: "Vitaly Rtishchev",
+    githubUsername: "rtivital",
   },
 };
