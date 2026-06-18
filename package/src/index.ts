@@ -1,7 +1,9 @@
-export { TestComponent } from './TestComponent';
+export { TestComponent } from "./TestComponent";
 export type {
   TestComponentProps,
   TestComponentCssVariables,
   TestComponentFactory,
   TestComponentStylesNames,
-} from './TestComponent';
+} from "./TestComponent";
+
+export * from "./theme";

@@ -5,6 +5,17 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
+"@0n0k0/materia@workspace:*, @0n0k0/materia@workspace:package":
+  version: 0.0.0-use.local
+  resolution: "@0n0k0/materia@workspace:package"
+  peerDependencies:
+    "@mantine/core": ">=7.0.0"
+    "@mantine/hooks": ">=7.0.0"
+    react: ^18.x || ^19.x
+    react-dom: ^18.x || ^19.x
+  languageName: unknown
+  linkType: soft
+
 "@adobe/css-tools@npm:^4.4.0":
   version: 4.4.1
   resolution: "@adobe/css-tools@npm:4.4.1"
@@ -5677,6 +5688,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "extension-template-docs@workspace:docs"
   dependencies:
+    "@0n0k0/materia": "workspace:*"
     "@mantine/code-highlight": "npm:9.3.1"
     "@mantine/core": "npm:9.3.1"
     "@mantine/hooks": "npm:9.3.1"
@@ -5693,7 +5705,6 @@ __metadata:
     "@types/node": "npm:^22.15.24"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
-    mantine-extension-template: "workspace:*"
     next: "npm:16.2.2"
     react: "npm:19.2.4"
     react-dom: "npm:19.2.4"
@@ -8426,17 +8437,6 @@ __metadata:
   checksum: 10c0/103aa922f3334f36d1ae6881b61dfd3ddff146de4ceec9723bdc2febc347c4dd33ccea8e78c2a4d05f9ad585d9630be1aab47f0fc70d4acf34532ac411d27a00
   languageName: node
   linkType: hard
-
-"mantine-extension-template@workspace:*, mantine-extension-template@workspace:package":
-  version: 0.0.0-use.local
-  resolution: "mantine-extension-template@workspace:package"
-  peerDependencies:
-    "@mantine/core": ">=7.0.0"
-    "@mantine/hooks": ">=7.0.0"
-    react: ^18.x || ^19.x
-    react-dom: ^18.x || ^19.x
-  languageName: unknown
-  linkType: soft
 
 "map-cache@npm:^0.2.2":
   version: 0.2.2

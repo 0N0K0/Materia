@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@0n0k0/materia": "workspace:*",
     "@mantine/code-highlight": "9.3.1",
     "@mantine/core": "9.3.1",
     "@mantine/hooks": "9.3.1",
@@ -22,7 +23,6 @@
     "@next/mdx": "16.2.2",
     "@tabler/icons-react": "^3.33.0",
     "@types/mdx": "^2.0.13",
-    "mantine-extension-template": "workspace:*",
     "next": "16.2.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",

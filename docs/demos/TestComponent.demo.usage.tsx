@@ -1,9 +1,9 @@
-import { MantineDemo } from '@mantinex/demo';
-import { TestComponent } from 'mantine-extension-template';
-import React from 'react';
+import { MantineDemo } from "@mantinex/demo";
+import { TestComponent } from "@0n0k0/materia";
+import React from "react";
 
 const code = `
-import { TestComponent } from 'mantine-extension-template';
+import { TestComponent } from '@0n0k0/materia';
 
 function Demo() {
   return <TestComponent label="Test component usage demo" />;
@@ -15,7 +15,7 @@ function Demo() {
 }
 
 export const usage: MantineDemo = {
-  type: 'code',
+  type: "code",
   component: Demo,
   code,
   centered: true,
