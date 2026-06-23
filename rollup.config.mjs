@@ -4,6 +4,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import esbuild from 'rollup-plugin-esbuild';
 import postcss from 'rollup-plugin-postcss';
+import postcssImport from 'postcss-import';
 import banner from 'rollup-plugin-banner2';
 import { createGenerateScopedName } from 'hash-css-selector';
 
@@ -41,6 +42,7 @@ export default {
       extract: true,
       modules: { generateScopedName: createGenerateScopedName('me') },
       minimize: true,
+      plugins: [postcssImport()],
     }),
     banner((chunk) => {
       if (chunk.fileName !== 'index.js' && chunk.fileName !== 'index.mjs') {
