@@ -1,4 +1,9 @@
-import type { DefaultMantineSize, MantineBreakpoint } from '@mantine/core';
+import type {
+  DefaultMantineColor,
+  DefaultMantineSize,
+  MantineBreakpoint,
+  MantineColorsTuple,
+} from '@mantine/core';
 import { Layout } from './layout';
 
 type typographyStyle = {
@@ -10,6 +15,8 @@ type typographyStyle = {
 };
 
 type ExtendedXXS = 'xxs' | DefaultMantineSize;
+type ExtendedXXL = DefaultMantineSize | 'xxl';
+type ExtendedShadows = ExtendedXXS & ExtendedXXL;
 
 type ExtendedFontWeights =
   | 'thin'
@@ -21,6 +28,23 @@ type ExtendedFontWeights =
   | 'bold'
   | 'extrabold'
   | 'black';
+
+type ExtendedCustomColors =
+  | 'deepOrange'
+  | 'amber'
+  | 'lightBlue'
+  | 'fuchsia'
+  | 'strawberry'
+  | 'golden'
+  | 'core'
+  | 'support'
+  | 'accent'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'darkElevations'
+  | DefaultMantineColor;
 
 // Surcharge le type de thème de Mantine pour y ajouter les propriétés spécifiques au projet Venustas
 declare module '@mantine/core' {
@@ -56,12 +80,36 @@ declare module '@mantine/core' {
 
     layout: Layout;
     heightBreakpoints: Partial<Record<MantineBreakpoint, string>>;
+
+    opacities: {
+      text: {
+        primary: number;
+        secondary: number;
+        disabled: number;
+      };
+      divider: number;
+      states: {
+        hover: number;
+        selected: number;
+        disabled: number;
+        focus: number;
+        active: number;
+      };
+    };
+  }
+
+  export interface MantineThemeColorsOverride {
+    colors: Record<ExtendedCustomColors, MantineColorsTuple>;
   }
 
   export interface MantineThemeSizesOverride {
     fontSizes: Record<ExtendedXXS, string>;
     lineHeights: Record<ExtendedXXS, string>;
     fontWeights: Record<ExtendedFontWeights, string>;
+
+    spacing: Record<ExtendedXXL, string>;
+
+    shadows: Record<ExtendedShadows, string>;
   }
 }
 
