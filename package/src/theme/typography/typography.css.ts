@@ -1,5 +1,5 @@
 import type { MantineTheme } from '@mantine/core';
-import { createCssVariables } from '../..';
+import { createCssVariables } from '../../utils/css.utils';
 import { createTypographyVariables } from './typography.utils';
 
 export const TYPOGRAPHY_CSS_VARIABLES = (theme: MantineTheme) => {
