@@ -3090,6 +3090,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/chroma-js@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@types/chroma-js@npm:3.1.2"
+  checksum: 10c0/d2a7d9612c5abe3733a113d339eb8158cb36aeeeb571a3c371e81e8f3a682cd70f1649cea521716fbb5d79eb96f585a539b304be44e3fa818bd56b2a05f29f73
+  languageName: node
+  linkType: hard
+
 "@types/debug@npm:^4.0.0":
   version: 4.1.10
   resolution: "@types/debug@npm:4.1.10"
@@ -4344,6 +4351,13 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: 10c0/594754e1303672171cc04e50f6c398ae16128eb134a88f801bf5354fd96f205320f23536a045d9abd8b51024a149696e51231565891d4efdab8846021ecf88e6
+  languageName: node
+  linkType: hard
+
+"chroma-js@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "chroma-js@npm:3.2.0"
+  checksum: 10c0/6ff6213d234e096ad3536291b1e1f11a506ea0fccfe163dd8eff69afa5f4f8a905b31a4a7ebc22b7eb722590887fed77073805ce89485f6d563edd1ea2d0a1db
   languageName: node
   linkType: hard
 
@@ -6623,6 +6637,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hsluv@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "hsluv@npm:1.0.2"
+  checksum: 10c0/1baa35d582ba88d45c3b7d0442c14b716df25eccb99c5b1b44bbf3c08a278e53c3aa0abfedca19e695603bb6f0d1e1f438660f2aca1227461a2b9d9c361b8999
+  languageName: node
+  linkType: hard
+
 "html-encoding-sniffer@npm:^3.0.0":
   version: 3.0.0
   resolution: "html-encoding-sniffer@npm:3.0.0"
@@ -8323,6 +8344,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.3.0"
     "@testing-library/user-event": "npm:^14.6.1"
+    "@types/chroma-js": "npm:^3.1.2"
     "@types/fs-extra": "npm:^11"
     "@types/identity-obj-proxy": "npm:^3"
     "@types/jest": "npm:^29.5.14"
@@ -8332,11 +8354,13 @@ __metadata:
     "@types/signale": "npm:^1"
     "@types/yargs": "npm:^17.0.33"
     "@vitejs/plugin-react": "npm:^4.5.0"
+    chroma-js: "npm:^3.2.0"
     esbuild: "npm:^0.25.5"
     esbuild-jest: "npm:^0.5.0"
     fs-extra: "npm:^11.3.0"
     gh-pages: "npm:^6.3.0"
     hash-css-selector: "npm:^1.1.0"
+    hsluv: "npm:^1.0.2"
     identity-obj-proxy: "npm:^3.0.0"
     jest: "npm:^29.7.0"
     jest-axe: "npm:^10.0.0"
