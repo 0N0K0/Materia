@@ -1,4 +1,5 @@
-import type { DefaultMantineSize } from '@mantine/core';
+import type { DefaultMantineSize, MantineBreakpoint } from '@mantine/core';
+import { Layout } from './layout';
 
 type typographyStyle = {
   fontFamily: string;
@@ -52,6 +53,9 @@ declare module '@mantine/core' {
         meta: typographyStyle;
       };
     };
+
+    layout: Layout;
+    heightBreakpoints: Partial<Record<MantineBreakpoint, string>>;
   }
 
   export interface MantineThemeSizesOverride {
