@@ -1,6 +1,6 @@
-import { MantineDemo } from "@mantinex/demo";
-import { TestComponent } from "@0n0k0/materia";
-import React from "react";
+import { TestComponent } from '@0n0k0/materia';
+import { MantineDemo } from '@mantinex/demo';
+import React from 'react';
 
 const code = `
 import { TestComponent } from '@0n0k0/materia';
@@ -15,7 +15,7 @@ function Demo() {
 }
 
 export const usage: MantineDemo = {
-  type: "code",
+  type: 'code',
   component: Demo,
   code,
   centered: true,

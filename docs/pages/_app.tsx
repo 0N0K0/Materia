@@ -1,24 +1,21 @@
-import "@mantine/core/styles.css";
-import "@mantine/code-highlight/styles.css";
-import "@mantinex/mantine-logo/styles.css";
-import "@mantinex/mantine-header/styles.css";
-import "@mantinex/demo/styles.css";
-import "@0n0k0/materia/styles.css";
-import {
-  CodeHighlightAdapterProvider,
-  createShikiAdapter,
-} from "@mantine/code-highlight";
-import { MantineProvider } from "@mantine/core";
-import { AppProps } from "next/app";
-import Head from "next/head";
-import React from "react";
-import favicon from "../assets/favicon.svg";
-import { theme } from "../theme";
+import '@mantine/core/styles.css';
+import '@mantine/code-highlight/styles.css';
+import '@mantinex/mantine-logo/styles.css';
+import '@mantinex/mantine-header/styles.css';
+import '@mantinex/demo/styles.css';
+import '@0n0k0/materia/styles.css';
+import { CodeHighlightAdapterProvider, createShikiAdapter } from '@mantine/code-highlight';
+import { MantineProvider } from '@mantine/core';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import React from 'react';
+import favicon from '../assets/favicon.svg';
+import { theme } from '../theme';
 
 async function loadShiki() {
-  const { createHighlighter } = await import("shiki");
+  const { createHighlighter } = await import('shiki');
   const shiki = await createHighlighter({
-    langs: ["tsx", "scss", "html", "bash", "json"],
+    langs: ['tsx', 'scss', 'html', 'bash', 'json'],
     themes: [],
   });
 
