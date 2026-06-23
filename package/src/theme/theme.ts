@@ -1,10 +1,12 @@
 import { createTheme, type CSSVariablesResolver, type MantineTheme } from '@mantine/core';
 import { LAYOUT_CONFIG, LAYOUT_CSS_VARIABLES } from './layout';
+import { SHAPES_CONFIG } from './shapes';
 import { TYPOGRAPHY_CONFIG, TYPOGRAPHY_CSS_VARIABLES } from './typography';
 
 export const theme = createTheme({
   ...TYPOGRAPHY_CONFIG,
   ...LAYOUT_CONFIG,
+  ...SHAPES_CONFIG,
 });
 
 export const resolver: CSSVariablesResolver = (theme: MantineTheme) => ({
