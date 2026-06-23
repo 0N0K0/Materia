@@ -9,6 +9,7 @@ import banner from 'rollup-plugin-banner2';
 import { createGenerateScopedName } from 'hash-css-selector';
 
 const outputDir = path.join(process.cwd(), './package/dist');
+const srcDir = path.join(process.cwd(), './package/src');
 
 export default {
   input: path.join(process.cwd(), './package/src/index.ts'),
@@ -18,6 +19,7 @@ export default {
       entryFileNames: '[name].mjs',
       dir: path.join(outputDir, 'esm'),
       preserveModules: true,
+      preserveModulesRoot: srcDir,
       sourcemap: true,
     },
     {
@@ -25,6 +27,7 @@ export default {
       entryFileNames: '[name].cjs',
       dir: path.join(outputDir, 'cjs'),
       preserveModules: true,
+      preserveModulesRoot: srcDir,
       sourcemap: true,
     },
   ],

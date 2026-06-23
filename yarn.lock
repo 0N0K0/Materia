@@ -11,7 +11,6 @@ __metadata:
   peerDependencies:
     "@mantine/core": ">=7.0.0"
     "@mantine/hooks": ">=7.0.0"
-    chroma-js: ^3.2.0
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
   languageName: unknown
@@ -5720,7 +5719,6 @@ __metadata:
     "@types/node": "npm:^22.15.24"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
-    chroma-js: "npm:^3.2.0"
     next: "npm:16.2.2"
     react: "npm:19.2.4"
     react-dom: "npm:19.2.4"
