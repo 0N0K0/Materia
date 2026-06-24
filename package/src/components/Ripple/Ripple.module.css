@@ -1,0 +1,43 @@
+.root {
+  /* Dimension */
+  width: var(--ripple-radius);
+  height: var(--ripple-radius);
+  border-radius: 50%;
+  /* Arrière-plan */
+  background: var(--ripple-bg);
+  /* Effets */
+  opacity: var(--ripple-opacity);
+
+  &[data-trigger='focus'] {
+    /* Position */
+    position: static;
+    z-index: 2;
+    /* Espacement */
+    margin-top: var(--ripple-y);
+    margin-left: var(--ripple-x);
+    /* Animation */
+    animation: onoko-ripple-pulse var(--ripple-duration) var(--ripple-easing) infinite alternate;
+  }
+
+  &[data-trigger='hover'],
+  &[data-trigger='touch'] {
+    /* Position */
+    position: absolute;
+    top: var(--ripple-y);
+    left: var(--ripple-x);
+  }
+
+  &[data-trigger='hover'] {
+    /* Position */
+    z-index: 1;
+  }
+
+  &[data-trigger='touch'] {
+    /* Position */
+    z-index: 3;
+    /* Effets */
+    transform: scale(0);
+    /* Animation */
+    animation: 'onoko-ripple-touch' var(--ripple-duration) var(--ripple-easing);
+  }
+}

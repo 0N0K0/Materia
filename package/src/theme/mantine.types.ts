@@ -46,7 +46,7 @@ type ExtendedCustomColors =
   | 'darkElevations'
   | DefaultMantineColor;
 
-// Surcharge le type de thème de Mantine pour y ajouter les propriétés spécifiques au projet Venustas
+// Surcharge le type de thème de Mantine pour y ajouter les propriétés spécifiques au projet Materia
 declare module '@mantine/core' {
   export interface MantineTheme {
     fontSize: number;
