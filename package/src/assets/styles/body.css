@@ -1,0 +1,16 @@
+:root[data-mantine-color-scheme='light'],
+:host([data-mantine-color-scheme='light']) {
+  /* Arrière-plan */
+  --mantine-color-body: var(--mantine-color-gray-0);
+}
+
+:root[data-mantine-color-scheme='dark'],
+:host([data-mantine-color-scheme='dark']) {
+  /* Arrière-plan */
+  --mantine-color-body: var(--mantine-color-darkElevations-0);
+}
+
+body {
+  font-size: var(--mantine-font-size-sm);
+  line-height: var(--mantine-line-height-sm);
+}

@@ -210,12 +210,19 @@ export function createPalette({
  * @returns {MantineColorScheme} Le schéma de couleurs actuel, qui peut être "light" ou "dark".
  */
 export function getColorScheme(): Exclude<MantineColorScheme, 'auto'> {
+  if (typeof document === 'undefined') {
+    return 'light';
+  }
+
   const value = document.documentElement.getAttribute(
     'data-mantine-color-scheme'
   ) as MantineColorScheme | null;
 
   if (value === 'auto' || !value) {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
   }
 
   return value;

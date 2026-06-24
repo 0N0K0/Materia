@@ -16,7 +16,7 @@
     margin-top: var(--ripple-y);
     margin-left: var(--ripple-x);
     /* Animation */
-    animation: onoko-ripple-pulse var(--ripple-duration) var(--ripple-easing) infinite alternate;
+    animation: 'onoko-ripple-pulse' var(--ripple-duration) var(--ripple-easing) infinite alternate;
   }
 
   &[data-trigger='hover'],

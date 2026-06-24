@@ -5,7 +5,7 @@ import {
   type MantineGradient,
   type MantineTheme,
 } from '@mantine/core';
-import { getColorScheme } from '../theme';
+import { getColorScheme } from '../theme/palette/palette.utils';
 
 /**
  * Récupère le contraste de couleur en fonction du thème, de la variante, de la couleur ou du gradient.

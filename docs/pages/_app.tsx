@@ -4,8 +4,8 @@ import '@mantinex/mantine-logo/styles.css';
 import '@mantinex/mantine-header/styles.css';
 import '@mantinex/demo/styles.css';
 import '@0n0k0/materia/styles.css';
+import { PublicThemeProvider } from '@0n0k0/materia';
 import { CodeHighlightAdapterProvider, createShikiAdapter } from '@mantine/code-highlight';
-import { MantineProvider } from '@mantine/core';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
@@ -26,7 +26,7 @@ const shikiAdapter = createShikiAdapter(loadShiki);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MantineProvider theme={theme}>
+    <PublicThemeProvider customTheme={theme}>
       <Head>
         <title>Mantine Template</title>
         <meta
@@ -38,6 +38,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <CodeHighlightAdapterProvider adapter={shikiAdapter}>
         <Component {...pageProps} />
       </CodeHighlightAdapterProvider>
-    </MantineProvider>
+    </PublicThemeProvider>
   );
 }

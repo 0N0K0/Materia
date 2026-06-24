@@ -20,7 +20,7 @@ export function SelectorsTable({
       <Table.Td>{selector}</Table.Td>
       <Table.Td>
         <TableInlineCode>
-          .mantine-{component}-{selector}
+          .onoko-{component}-{selector}
         </TableInlineCode>
       </Table.Td>
       <Table.Td>

@@ -5,7 +5,11 @@ const getComponentPath = (componentPath: string) =>
   path.join(process.cwd(), 'package/src', componentPath);
 
 generateDeclarations({
-  componentsPaths: [getComponentPath('components/TestComponent/TestComponent.tsx')],
+  componentsPaths: [
+    getComponentPath('components/TestComponent/TestComponent.tsx'),
+    getComponentPath('components/Ripple/Ripple.tsx'),
+    getComponentPath('components/Actionnable/Actionnable.tsx'),
+  ],
   tsConfigPath: path.join(process.cwd(), 'tsconfig.json'),
   outputPath: path.join(process.cwd(), 'docs'),
 });
