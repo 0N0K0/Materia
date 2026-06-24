@@ -96,6 +96,20 @@ declare module '@mantine/core' {
         active: number;
       };
     };
+
+    focusRippleMode: 'focus' | 'active';
+    transitions: {
+      easing: Record<string, string>;
+      duration: {
+        shorter: string;
+        short: string;
+        standard: string;
+        long: string;
+        complex: string;
+        enteringScreen: string;
+        leavingScreen: string;
+      };
+    };
   }
 
   export interface MantineThemeColorsOverride {
