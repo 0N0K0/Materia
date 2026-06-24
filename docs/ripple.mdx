@@ -1,0 +1,17 @@
+import * as demos from "./demos";
+
+## Usage
+
+Ripple est un composant de bas niveau utilisé par `Actionnable`. Il affiche un effet de ripple pour les états `hover`, `focus` ou `touch`.
+
+<Demo data={demos.rippleUsage} />
+
+## Triggers
+
+| Trigger   | Comportement                                                                      |
+| --------- | --------------------------------------------------------------------------------- |
+| `focus`   | Pulsation statique animée en boucle — indique le focus clavier.                   |
+| `hover`   | Ripple positionné à l'entrée/sortie du pointeur, avec transition d'opacité.       |
+| `touch`   | Ripple déclenché au `pointerdown`, s'étend depuis le point de contact.            |
+
+Le trigger `hover` requiert les props `mounted` et `phaseControls` (fournis par `useActionEffect`).

@@ -2,7 +2,7 @@ import '../../styles.css';
 import '@mantine/core/styles.layer.css';
 import {
   mergeThemeOverrides,
-  type MantineTheme,
+  type MantineThemeOverride,
   type MantineProviderProps,
   MantineProvider,
 } from '@mantine/core';
@@ -16,7 +16,7 @@ export function PublicThemeProvider({
   customTheme,
   ...themeProps
 }: {
-  customTheme?: MantineTheme;
+  customTheme?: MantineThemeOverride;
 } & Omit<MantineProviderProps, 'theme' | 'classNamesPrefix'>) {
   const mergedTheme = customTheme ? mergeThemeOverrides(theme, customTheme) : theme;
 

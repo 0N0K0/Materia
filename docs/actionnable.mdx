@@ -1,0 +1,24 @@
+import * as demos from "./demos";
+
+## Usage
+
+`Actionnable` est une surface d'interaction polymorphique qui ajoute des effets de ripple (hover, focus, touch) à n'importe quel élément.
+
+<Demo data={demos.actionnableUsage} />
+
+## Configurator
+
+<Demo data={demos.actionnableConfigurator} />
+
+## Ripple target
+
+Par défaut, `Actionnable` s'observe lui-même. Passer `rippleTarget` ou `focusTarget` permet de déléguer l'écoute des événements à un élément extérieur (ex : le bouton natif wrapé par `Actionnable`).
+
+## Désactiver les ripples
+
+```tsx
+<Actionnable disableRipples>...</Actionnable>
+<Actionnable disableHoverRipple>...</Actionnable>
+<Actionnable disableFocusRipple>...</Actionnable>
+<Actionnable disableTouchRipple>...</Actionnable>
+```

@@ -28,11 +28,11 @@ export const PACKAGE_DATA: PackageData = {
   packageName: '@0n0k0/materia',
   packageDescription:
     'A template for mantine extensions, includes full setup for package development and documentation',
-  mdxFileUrl: 'https://github.com/rtivital/@0n0k0/materia/blob/master/docs/pages/index.mdx',
-  repositoryUrl: 'https://github.com/rtivital/@0n0k0/materia',
-  licenseUrl: 'https://github.com/rtivital/@0n0k0/materia/blob/master/LICENSE',
+  mdxFileUrl: 'https://github.com/0N0K0/Materia/blob/main/docs/docs.mdx',
+  repositoryUrl: 'https://github.com/0N0K0/Materia',
+  licenseUrl: 'https://github.com/0N0K0/Materia/blob/main/LICENSE',
   author: {
-    name: 'Vitaly Rtishchev',
-    githubUsername: 'rtivital',
+    name: 'Noémie Koelblen',
+    githubUsername: '0N0K0',
   },
 };
