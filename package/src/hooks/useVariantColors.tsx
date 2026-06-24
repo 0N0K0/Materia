@@ -133,5 +133,7 @@ export function useVariantColors(
     white: resolveWhite,
   };
 
-  return variantStrategies[(variant || 'filled') as keyof typeof variantStrategies]();
+  return (
+    variantStrategies[(variant || 'filled') as keyof typeof variantStrategies] ?? resolveFilled
+  )();
 }

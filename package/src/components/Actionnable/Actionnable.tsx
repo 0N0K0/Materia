@@ -18,7 +18,7 @@ import {
   useStyles,
   type GetStylesApi,
 } from '@mantine/core';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useVariantColors } from '../../hooks';
 import { getContrastColor } from '../../utils';
 import { Ripple } from '../Ripple';

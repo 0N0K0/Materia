@@ -10,6 +10,7 @@ import {
   useProps,
   useStyles,
 } from '@mantine/core';
+import React from 'react';
 import classes from './Ripple.module.css';
 
 export type RippleStylesNames = 'root';
