@@ -1,0 +1,65 @@
+@import "../../../assets/styles/layers.css";
+
+@layer override {
+  .sectionBase {
+    /* Dimension */
+    height: auto;
+
+    /* Espacement */
+    --section-padding-x-xxs: calc(rem(6px) - rem(1px));
+    --section-padding-x-xs: calc(rem(12px) - rem(1px));
+    --section-padding-x-sm: calc(rem(18px) - rem(1px));
+    --section-padding-x-md: calc(rem(24px) - rem(1px));
+    --section-padding-x-lg: calc(rem(30px) - rem(1px));
+    --section-padding-x-xl: calc(rem(36px) - rem(1px));
+    --section-padding-x-compact-xxs: calc(
+      (var(--section-padding-x-xxs) + rem(1px)) / 1.5
+    );
+    --section-padding-x-compact-xs: calc(
+      (var(--section-padding-x-xs) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-x-compact-sm: calc(
+      (var(--section-padding-x-sm) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-x-compact-md: calc(
+      (var(--section-padding-x-md) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-x-compact-lg: calc(
+      (var(--section-padding-x-lg) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-x-compact-xl: calc(
+      (var(--section-padding-x-xl) + rem(1px)) / 1.5 - rem(1px)
+    );
+
+    --section-padding-y-xxs: calc(
+      (var(--section-padding-x-xxs) + rem(1px)) / 3 - rem(1px)
+    );
+    --section-padding-y-xs: calc(
+      (var(--section-padding-x-xs) + rem(1px)) / 3 - rem(1px)
+    );
+    --section-padding-y-sm: calc(
+      (var(--section-padding-x-sm) + rem(1px)) / 3 - rem(1px)
+    );
+    --section-padding-y-md: calc(var(--section-padding-x-md) - rem(12px));
+    --section-padding-y-lg: calc(var(--section-padding-x-lg) - rem(12px));
+    --section-padding-y-xl: calc(var(--section-padding-x-xl) - rem(12px));
+    --section-padding-y-compact-xxs: var(--section-padding-y-xxs);
+    --section-padding-y-compact-xs: var(--section-padding-y-xs);
+    --section-padding-y-compact-sm: calc(
+      (var(--section-padding-y-sm) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-y-compact-md: calc(
+      (var(--section-padding-y-md) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-y-compact-lg: calc(
+      (var(--section-padding-y-lg) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --section-padding-y-compact-xl: calc(
+      (var(--section-padding-y-xl) + rem(1px)) / 1.5 - rem(1px)
+    );
+    padding-block: var(--section-padding-y, var(--section-padding-y-sm));
+
+    /* Typographie */
+    line-height: var(--section-lh, var(--mantine-line-height-sm));
+  }
+}

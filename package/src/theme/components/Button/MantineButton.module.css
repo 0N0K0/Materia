@@ -1,0 +1,239 @@
+@import "../../../assets/styles/layers.css";
+
+@layer override {
+  .root {
+    /* Dimension */
+    height: auto;
+    min-height: 100%;
+
+    /* Espacement */
+    --button-padding-x-xxs: calc(rem(6px) - rem(1px));
+    --button-padding-x-xs: calc(rem(12px) - rem(1px));
+    --button-padding-x-sm: calc(rem(18px) - rem(1px));
+    --button-padding-x-md: calc(rem(24px) - rem(1px));
+    --button-padding-x-lg: calc(rem(30px) - rem(1px));
+    --button-padding-x-xl: calc(rem(36px) - rem(1px));
+    --button-padding-x-compact-xxs: calc(
+      (var(--button-padding-x-xxs) + rem(1px)) / 1.5
+    );
+    --button-padding-x-compact-xs: calc(
+      (var(--button-padding-x-xs) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-x-compact-sm: calc(
+      (var(--button-padding-x-sm) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-x-compact-md: calc(
+      (var(--button-padding-x-md) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-x-compact-lg: calc(
+      (var(--button-padding-x-lg) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-x-compact-xl: calc(
+      (var(--button-padding-x-xl) + rem(1px)) / 1.5 - rem(1px)
+    );
+
+    --button-padding-y-xxs: calc(rem(2px) - rem(1px));
+    --button-padding-y-xs: calc(rem(4px) - rem(1px));
+    --button-padding-y-sm: calc(rem(6px) - rem(1px));
+    --button-padding-y-md: calc(rem(12px) - rem(1px));
+    --button-padding-y-lg: calc(rem(12px) - rem(1px));
+    --button-padding-y-xl: calc(rem(12px) - rem(1px));
+    --button-padding-y-compact-xxs: var(--button-padding-y-xxs);
+    --button-padding-y-compact-xs: var(--button-padding-y-xs);
+    --button-padding-y-compact-sm: calc(
+      (var(--button-padding-y-sm) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-y-compact-md: calc(
+      (var(--button-padding-y-md) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-y-compact-lg: calc(
+      (var(--button-padding-y-lg) + rem(1px)) / 1.5 - rem(1px)
+    );
+    --button-padding-y-compact-xl: calc(
+      (var(--button-padding-y-xl) + rem(1px)) / 1.5 - rem(1px)
+    );
+    padding-block: var(--button-padding-y, var(--button-padding-y-sm));
+
+    &[data-with-left-section] {
+      padding-inline-start: calc(
+        (var(--button-padding-x) + rem(1px)) / 1.5 - rem(1px)
+      );
+    }
+    &[data-with-right-section] {
+      padding-inline-end: calc(
+        (var(--button-padding-x) + rem(1px)) / 1.5 - rem(1px)
+      );
+    }
+
+    /* Typographie */
+    font-family: var(--onoko-interface-meta-font-family);
+    font-weight: var(--onoko-interface-meta-font-weight);
+    font-style: var(--onoko-interface-meta-font-style);
+    letter-spacing: var(--onoko-interface-meta-letter-spacing);
+    text-transform: var(--onoko-interface-meta-text-transform);
+    line-height: var(--button-lh, var(--mantine-line-height-sm));
+
+    /* Interaction */
+    &:disabled,
+    &[data-disabled],
+    &[data-loading] {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  .inner {
+    /* Espacement */
+    gap: max(calc(var(--button-padding-y) + rem(1px)), rem(8px));
+  }
+
+  .label {
+    /* Typographie */
+    white-space: normal;
+  }
+
+  .section {
+    /* Espacement */
+    &[data-position="left"] {
+      margin-inline-end: 0;
+    }
+    &[data-position="right"] {
+      margin-inline-start: 0;
+    }
+  }
+
+  .loader {
+    /* Position */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* Agencement */
+    display: flex;
+    /* Dimension */
+    width: var(--button-fz, var(--mantine-font-size-sm));
+    height: var(--button-fz, var(--mantine-font-size-sm));
+    :global(.onoko-Loader-root) {
+      width: 100% !important;
+      height: 100% !important;
+      &:after {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .group {
+    & :global(.onoko-Actionnable-root) {
+      /* Bordure */
+      box-shadow: none;
+    }
+
+    &[data-orientation="horizontal"] :global(.onoko-Actionnable-root) {
+      &:not(:only-child):first-child {
+        /* Dimension */
+        border-end-end-radius: 0;
+        border-start-end-radius: 0;
+        /* Bordure */
+        border-inline-end-width: calc(var(--button-border-width) / 2);
+
+        & .root {
+          /* Espacement */
+          padding-right: calc(
+            var(--button-padding-x) + (var(--button-border-width) / 2)
+          );
+          /* Bordure */
+          border-inline-end-width: 0;
+        }
+      }
+
+      &:not(:only-child):last-child {
+        /* Dimension */
+        border-end-start-radius: 0;
+        border-start-start-radius: 0;
+        /* Bordure */
+        border-inline-start-width: calc(var(--button-border-width) / 2);
+
+        & .root {
+          /* Espacement */
+          padding-left: calc(
+            var(--button-padding-x) + (var(--button-border-width) / 2)
+          );
+          /* Bordure */
+          border-inline-start-width: 0;
+        }
+      }
+
+      &:not(:only-child):not(:first-child):not(:last-child) {
+        /* Dimension */
+        border-radius: 0;
+        /* Bordure */
+        border-inline-width: calc(var(--button-border-width) / 2);
+
+        & .root {
+          /* Espacement */
+          padding-inline: calc(
+            var(--button-padding-x) + (var(--button-border-width) / 2)
+          );
+          /* Bordure */
+          border-inline-width: 0;
+        }
+      }
+    }
+
+    &[data-orientation="vertical"] :global(.onoko-Actionnable-root) {
+      &:not(:only-child):first-child {
+        /* Dimension */
+        border-end-start-radius: 0;
+        border-end-end-radius: 0;
+        /* Bordure */
+        border-bottom-width: calc(var(--button-border-width) / 2);
+
+        & .root {
+          /* Espacement */
+          padding-bottom: calc(
+            var(--button-padding-y) + (var(--button-border-width) / 2)
+          );
+          /* Bordure */
+          border-bottom-width: 0;
+        }
+      }
+
+      &:not(:only-child):last-child {
+        /* Dimension */
+        border-start-start-radius: 0;
+        border-start-end-radius: 0;
+        /* Bordure */
+        border-top-width: calc(var(--button-border-width) / 2);
+
+        & .root {
+          /* Espacement */
+          padding-top: calc(
+            var(--button-padding-y) + (var(--button-border-width) / 2)
+          );
+          /* Bordure */
+          border-top-width: 0;
+        }
+      }
+
+      &:not(:only-child):not(:first-child):not(:last-child) {
+        /* Dimension */
+        border-radius: 0;
+        /* Bordure */
+        border-block-width: calc(var(--button-border-width) / 2);
+
+        & .root {
+          /* Espacement */
+          padding-block: calc(
+            var(--button-padding-y) + (var(--button-border-width) / 2)
+          );
+          /* Bordure */
+          border-block-width: 0;
+        }
+      }
+    }
+  }
+
+  .groupSection {
+    composes: sectionBase from "../ButtonBase/ButtonBase.module.css";
+  }
+}
